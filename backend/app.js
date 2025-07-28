@@ -12,7 +12,14 @@ import UserRouter from './routers/user.router.js';
 
 import CategroyRouter from './routers/category.router.js'
 
-app.use(cors())
+app.use(
+  cors({
+    origin: "https://sonumakwana.vercel.app", // no trailing slash
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["content-type", "Authorization"],
+  })
+);
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
@@ -29,6 +36,16 @@ app.use("/user",UserRouter);
 app.use("/contact",ContactRouter);
 app.use("/category",CategroyRouter);
 
-app.listen(5000);
+// Health check route
+app.get("/", (req, res) => {
+  res.send("✅ Oyefill backend is running");
+});
+
+// Port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
+});
+
 
 console.log("server started at url http://localhost:5000/");

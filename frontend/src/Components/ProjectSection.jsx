@@ -29,7 +29,7 @@ const [ pList , setProjectList ] = useState([]);
             {
                  pList.map((row ,index)=>(
             <div className="projects" key={row._id}>
-                <img src={`public/assets/uploads/projectimages/${row.caticonnm}`}/>
+                <img src={row.caticonnm}/>
             
                <div className="actions">
                 <a href={row.gitlink} target="_blank">github</a>

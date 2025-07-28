@@ -94,7 +94,7 @@ const ManageProject = (_id,action) => {
             {
                  pList.map((row ,index)=>(
             <div className="projects" key={row._id}>
-                <img src={`public/assets/uploads/projectimages/${row.caticonnm}`}/>
+                <img src={row.caticonnm}/>
             
                <div className="actions">
                 <a><Link to="/updateproject"><i class="fa-solid fa-pencil"></i></Link></a>

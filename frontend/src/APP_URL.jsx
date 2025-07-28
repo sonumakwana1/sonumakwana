@@ -1,5 +1,5 @@
 
-export const __contactapiurl = "http://localhost:5000/contact/";
-export const __userapiurl = "http://localhost:5000/user/";
+export const __contactapiurl = "https://sonumakwana.onrender.com/contact/";
+export const __userapiurl = "https://sonumakwana.onrender.com/user/";
 
-export const __projectapiurl="http://localhost:5000/category/";
+export const __projectapiurl="https://sonumakwana.onrender.com/category/";

@@ -21,14 +21,6 @@ const FooterSection = () => {
                 <p><Link to="/contact">Contact</Link></p>
                 <p><Link to="/login">Login</Link></p>
             </div>
-           <div className="footer">
-                <h3>Quick Links</h3>
-                <p><Link to="/">Home </Link></p>
-                <p><Link to="/about">About</Link></p>
-                <p><Link to="/project">Project</Link></p>
-                <p><Link to="/contact">Contact</Link></p>
-                <p><Link to="/login">Login</Link></p>
-            </div>
         </footer>
         </>
     )
